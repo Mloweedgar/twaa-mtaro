@@ -520,7 +520,8 @@ $(function () {
             url: '/users/account',
             data: {
                 'user_id': $(this).attr('user_id'),
-                'role_id': $('#user_role_id').val()
+                'role_id': $('#user_category').children("option:selected").val()
+
             },
             success: function (data) {
                 fetchDrainInfo();
