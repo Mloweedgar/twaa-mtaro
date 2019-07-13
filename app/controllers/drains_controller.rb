@@ -1,4 +1,5 @@
 class DrainsController < ApplicationController
+  include DrainsHelper
   respond_to :json
   # added :update in except for testing only, TO BE REMOVED
   before_filter :authenticate_user!, :except => [:index, :find_closest, :update, :show]
